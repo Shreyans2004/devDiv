@@ -4,7 +4,6 @@ const devdiv2 = document.getElementById("devdiv2");
 const devdiv3 = document.getElementById("devdiv3");
 const devdiv4 = document.getElementById("devdiv4");
 var q="https://devdiv-web.netlify.app/";
-console.log("popup_script is running");
 devdiv.addEventListener("click", function () {
     let params={
         active:true,
@@ -13,7 +12,6 @@ devdiv.addEventListener("click", function () {
     chrome.tabs.query(params,gotTabs);
   function gotTabs(tabs) {
     let msg = {
-      txt: "hello",
       p:0
     };
     chrome.tabs.sendMessage(tabs[0].id, msg);
