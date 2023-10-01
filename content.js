@@ -11,7 +11,7 @@ function gotMessage(message,sender,sendResponse){
     const li = document.querySelectorAll('li');
 
     //ANALYZING THE BUTTON PRESSED BY USER IN EXTENSION POPUP
-    if(message.txt=="hello" && message.p==0){
+    if(message.p==0){
       div.forEach((divs) => {
         divs.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
@@ -37,7 +37,7 @@ function gotMessage(message,sender,sendResponse){
   
       
     }
-    else if(message.txt=="hello" && message.p==1){
+    else if(message.p==1){
       div.forEach((divs) => {
         const computedStyle = window.getComputedStyle(divs);
         const height = computedStyle.getPropertyValue("height");
@@ -72,7 +72,7 @@ imgs.appendChild(widthTextNode);
         imgs.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
   
-    }else if(message.txt=="hello" && message.p==2){
+    }else if(message.p==2){
       div.forEach((divs) => {
 const computedStyle = window.getComputedStyle(divs);
 const bgColor = computedStyle.getPropertyValue("background-color");
@@ -119,10 +119,9 @@ divs.appendChild(bgColorTextNode);
       img.forEach((imgs) => {
         imgs.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
-    }else if(message.link=="https://devdiv-web.netlify.app/"){
-
-      console.log("kdnfklndf");
-      window.location.href = "https://devdiv-web.netlify.app/";
+    }
+    else if(message.link=="https://devdiv-web.netlify.app/"){
+      window.location.href = "https://devdiv-web.netlify.app/";       //GO TO THE devDivweb URL IF THE USER HAS PRESSED HOW TO USE BUTTON IN EXTENSION'S POPUP
     }
     else
     {
