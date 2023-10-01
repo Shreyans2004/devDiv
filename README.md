@@ -28,4 +28,6 @@ Once installed, you can access the DevDiv extension from your browser's toolbar.
 
 DevDiv is built to simplify web development for beginners and enthusiasts. I would like to acknowledge the web development community for their continuous support and inspiration.
 
+For more details and to explore the extension's features, visit our website: [DevDiv Extension Website](https://devdiv-web.netlify.app/)
+
 Happy coding!
