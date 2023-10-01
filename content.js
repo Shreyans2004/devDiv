@@ -1,5 +1,7 @@
 chrome.runtime.onMessage.addListener(gotMessage);
+
 function gotMessage(message,sender,sendResponse){
+    //GRABBING THE IMPORTANT TAGS FROM THE WEBPAGE
     const div = document.querySelectorAll('div');
     const h1 = document.querySelectorAll('h1');
     const p = document.querySelectorAll('p');
@@ -7,6 +9,8 @@ function gotMessage(message,sender,sendResponse){
     const span = document.querySelectorAll('span');
     const img = document.querySelectorAll('img');
     const li = document.querySelectorAll('li');
+
+    //ANALYZING THE BUTTON PRESSED BY USER IN EXTENSION POPUP
     if(message.txt=="hello" && message.p==0){
       div.forEach((divs) => {
         divs.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -19,7 +23,6 @@ function gotMessage(message,sender,sendResponse){
         ps.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
       a.forEach((as) => {;
-
         as.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
       span.forEach((spans) => {
@@ -33,53 +36,18 @@ function gotMessage(message,sender,sendResponse){
       });
   
       
-    }else if(message.txt=="hello" && message.p==1){
+    }
+    else if(message.txt=="hello" && message.p==1){
       div.forEach((divs) => {
         const computedStyle = window.getComputedStyle(divs);
         const height = computedStyle.getPropertyValue("height");
-const width = computedStyle.getPropertyValue("width");
-const heightTextNode = document.createTextNode(` ${height}*`);
-const widthTextNode = document.createTextNode(`${width}`);
-divs.appendChild(heightTextNode);
-divs.appendChild(widthTextNode);
+        const width = computedStyle.getPropertyValue("width");
+        const heightTextNode = document.createTextNode(` ${height}*`);
+        const widthTextNode = document.createTextNode(`${width}`);
+        divs.appendChild(heightTextNode);
+        divs.appendChild(widthTextNode);
         divs.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
 
-      });
-    
-
-      h1.forEach((h1s) => {
-//         const computedStyle = window.getComputedStyle(h1s);
-//         const height = computedStyle.getPropertyValue("height");
-// const width = computedStyle.getPropertyValue("width");
-// const heightTextNode = document.createTextNode(` ${height}*`);
-// const widthTextNode = document.createTextNode(`${width}`);
-// h1s.appendChild(heightTextNode);
-// h1s.appendChild(widthTextNode);
-//         h1s.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
-      });
- 
-      p.forEach((ps) => {
-//         const computedStyle = window.getComputedStyle(ps);
-//         const height = computedStyle.getPropertyValue("height");
-// const width = computedStyle.getPropertyValue("width");
-// const heightTextNode = document.createTextNode(` ${height}*`);
-// const widthTextNode = document.createTextNode(`${width}`);
-// ps.appendChild(heightTextNode);
-// ps.appendChild(widthTextNode);
-        // ps.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
-       
-      });
-    
-
-      a.forEach((as) => {;
-//         const computedStyle = window.getComputedStyle(as);
-//         const height = computedStyle.getPropertyValue("height");
-// const width = computedStyle.getPropertyValue("width");
-// const heightTextNode = document.createTextNode(` ${height}*`);
-// const widthTextNode = document.createTextNode(`${width}`);
-// as.appendChild(heightTextNode);
-// as.appendChild(widthTextNode);
-        // as.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
 
       span.forEach((spans) => {
@@ -92,18 +60,7 @@ spans.appendChild(heightTextNode);
 spans.appendChild(widthTextNode);
         spans.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
       });
-
-      li.forEach((lis) => {
-//         const computedStyle = window.getComputedStyle(lis);
-//         const height = computedStyle.getPropertyValue("height");
-// const width = computedStyle.getPropertyValue("width");
-// const heightTextNode = document.createTextNode(` ${height}*`);
-// const widthTextNode = document.createTextNode(`${width}`);
-// lis.appendChild(heightTextNode);
-// lis.appendChild(widthTextNode);
-        // lis.style.border = `2px solid #${Math.floor(Math.random() * 16777215).toString(16)}`;
-      });
-
+        
       img.forEach((imgs) => {
         const computedStyle = window.getComputedStyle(imgs);
         const height = computedStyle.getPropertyValue("height");
