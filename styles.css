@@ -5,7 +5,7 @@
     margin:0;
 }
 body {
-    background-color: #DC143C;
+    background-color: #561544;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -36,7 +36,6 @@ body {
 table {
     display: none;
     font-size: 20px;
-
     font-weight: 700px;
 }
 
@@ -46,13 +45,14 @@ table {
 }
 
 button {
-    margin: auto;
-    padding: 20px;
-    background: #FFA07A;
-    color: black;
+    /* margin: auto; */
+    padding: 10px;
+    width: 300px;
+    background: #FFFFFF;
+    border: 2px solid #9400D3;
+    color: #9400D3;
     font-size: 1.2rem;
     font-weight: bolder;
-    border-radius: 20px;
     cursor: pointer;
 
 
@@ -90,6 +90,7 @@ td {
 
 }
 a{
-    font-size: 2rem;
-    color: blue;
+    font-size: 1.2rem;
+    
+    color: #9400D3;
 }
