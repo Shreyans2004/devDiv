@@ -2,7 +2,7 @@
 
 The DevDiv browser extension is designed to enhance the web development experience, especially for beginners who have just learned HTML and CSS and want to improve their skills by cloning websites. This extension offers various tools and features to simplify web development tasks and analysis.
 
-![DevDiv Extension](./extension-screenshot.jpg)
+![DevDiv Extension](./extension-screenshot.png)
 
 ## Features
 
